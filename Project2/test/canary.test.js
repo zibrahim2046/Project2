@@ -6,4 +6,7 @@ describe("canary test", function() {
   it("should pass this canary test", function() {
     expect(true).to.be.true;
   });
+  it("shouldn't pass", function() {
+    expect(true).to.be.true;
+  });
 });
