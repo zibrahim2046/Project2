@@ -1,3 +1,14 @@
+
+
+# UTA-VIRT-FSF-PT-01-2020-U-LOL Project #2
+![FACIA-banner-ad](Project2/public/assets/images/bannerAd_FACIA.png)
+
+Felipe, Ashley, Catherine, Ian, Amit
+
+[FACIA App on Heroku](https://pr0ject-2.herokuapp.com/)
+
+[FACIA Git Repo](https://github.com/zibrahim2046/Project2)
+
 # Project Starter
 
 In this activity we will add the provided boilerplate to group project repos.
@@ -36,3 +47,14 @@ In this activity we will add the provided boilerplate to group project repos.
 * Discuss as a group:
 
   * How would you now add changes to this project?
+
+
+### This Project:
+* Utilizes a Node and Express Web Server
+* Is backed by a MySQL Database with a Sequelize ORM
+* Uses both GET and POST routes for retrieving and adding new data
+* Is deployed using Heroku (with Data)
+* Incorporates **at least one new library, package, or technology that we haven’t discussed**
+* Has a polished frontend / UI
+* Is organized by a folder structure that meets MVC Paradigm
+* Meets good quality coding standards (indentation, scoping, naming)

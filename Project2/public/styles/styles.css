@@ -1,3 +1,40 @@
+/* =================================
+gold: #C2A83E
+light green: #E0EEC6
+medium green: #7CA982
+dark green: #243E36
+white
+black
+
+font-family: 'Lato', sans-serif;
+
+================================= */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .list-group-item {
   line-height: 2.5;
+}
+
+.navbar {
+  background-color: #243E36;
+  
+}
+
+.nav-link {
+  color: #E0EEC6; 
+}
+
+.nav-link:hover {
+  color: #7CA982; 
+}
+
+.nav-link:active {
+  color: #7CA982; 
+}
+
+.active {
+  color: #fff;
 }
