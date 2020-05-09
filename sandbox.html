@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 
   <!-- {{!-- favicon --}} -->
-  <link rel="icon" type="image" href="Project2/public/assets/images/logo_FACIA.ico">
+  <link rel="icon" type="image" href="public/assets/images/logo_FACIA.ico">
 
   <!-- {{!-- CSS --}} -->
-  <link rel="stylesheet" href="Project2/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
   
   <!-- {{!-- page title --}} -->
   <title>FA&cent;IA&trade;</title>
@@ -26,33 +26,33 @@
     <!-- {{{body}}} -->
 
     <nav class="navbar navbar-expand-lg">
-        <img src="Project2/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-              <a class="nav-link active" href="#">Budget <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tax Calculator</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Currency Converter</a>
-              </li>
-            <!-- <li class="nav-item dropdown">
+      <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link active" href="#">Budget<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Stocks</a>
+          </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Calculator</a>
+            </li> -->
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+                Calculator
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Currency Converter</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
-            </li> -->
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> -->
@@ -63,25 +63,71 @@
           </form> -->
         </div>
       </nav>
-
+      
     <div id="home">
         <div class="container">
           <div class="row">
-            <div class="col-8 offset-2">
-              <h1>{{msg}}</h1>
-              <h2>This is our Home Page!</h2>
+            <div class="col-12">
+              
+              <!-- <h1>{{msg}}</h1> -->
+              
+              <div class="row">
+                <div class="col-md-6 col-xs-12"><h4>Name</h4>
+                  <!-- <label for="salary"></label> -->
+                  <input type="text" id="name" class="form-control" aria-describedby="salary" placeholder="Name (required)"></div>
+                <div class="col-md-6 col-xs-12"><h4>Salary</h4>
+                  <!-- <label for="budget"></label> -->
+                  <input type="number" step="1" pattern="\d+" min="0"  id="budget" class="form-control" aria-describedby="budget" placeholder="Enter Yearly Salary Here"></div>
+                </div>          
+              
+              <h4>Expenses</h4>
               <form class="clearfix mb-4" action="POST">
-                <div class="form-group">
-                  <label for="example-text">Example Text</label>
-                  <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-                </div>
-                <div class="form-group">
+                
+
+                <div class="row">
+
+                  <div class="col-md-6 col-xs-12">
+                    <!-- <label for="rent"></label> -->
+                    <input type="number" step="1" pattern="\d+" min="0" id="rent" class="form-control" aria-describedby="rent" placeholder="Monthly Rent Expense"></div>
+                  <div class="col-md-6 col-xs-12">
+                    <!-- <label for="gas"></label> -->
+                    <input type="number" step="1" pattern="\d+" min="0" id="gas" class="form-control" aria-describedby="gas" placeholder=" Monthly Gas Allowance"></div>
+
+                    <div class="col-md-6 col-xs-12">
+                      <!-- <label for="groceries"></label> -->
+                      <input type="number" step="1" pattern="\d+" min="0" id="groceries" class="form-control" aria-describedby="groceries" placeholder="Monthly Groceries Expense"></div>
+                    <div class="col-md-6 col-xs-12">
+                      <!-- <label for="utilities"></label> -->
+                      <input type="number" step="1" pattern="\d+" min="0" id="utilities" class="form-control" aria-describedby="gas" placeholder=" Monthly Utilities Expense"></div>
+
+                      <div class="col-md-6 col-xs-12">
+                          <!-- <label for="phone"></label> -->
+                          <input type="number" step="1" pattern="\d+" min="0" id="phone" class="form-control" aria-describedby="phone" placeholder="Monthly Phone Expense"></div>
+                      <div class="col-md-6 col-xs-12">
+                        <!-- <label for="car"></label> -->
+                        <input type="number" step="1" pattern="\d+" min="0" id="car" class="form-control" aria-describedby="gas" placeholder=" Monthly Car Expense"></div>
+    
+                        <div class="col-md-6 col-xs-12">
+                          <!-- <label for="misc"></label> -->
+                          <input type="number" step="1" pattern="\d+" min="0" id="phone" class="form-control" aria-describedby="misc" placeholder="Misc. Monthly Expenses"></div>
+                        <div class="col-md-6 col-xs-12">
+                          <!-- <label for="entertainment"></label> -->
+                          <input type="number" step="1" pattern="\d+" min="0" id="entertainment" class="form-control" aria-describedby="entertainment" placeholder=" Monthly Entertainment Allowance"></div>
+
+
+                  </div>
+
+
+
+
+                  
+                <!-- <div class="form-group">
                   <label for="example-description">Example Description</label>
                   <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-                </div>
+                </div> -->
                 <button id="submit" class="btn btn-primary float-right">Submit</button>
               </form>
-              <h3>Examples:</h3>
+              <!-- <h3>Examples:</h3>
               <ul id="example-list" class="list-group">
                 {{#each examples}}
                 <li data-id="{{this.id}}" class="list-group-item">
@@ -89,17 +135,28 @@
                   <button class="btn btn-danger float-right delete">ｘ</button>
                 </li>
                 {{/each}}
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
       </div>
-      
+
+      <footer>
+       <div class="footer">
+
+
+       </div> 
+      </footer>
+
+
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="/js/index.js"></script>
 
 
-
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
 </body>
 
 </html>

@@ -14,13 +14,19 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
 .list-group-item {
   line-height: 2.5;
 }
 
 .navbar {
   background-color: #243E36;
-  
+  margin-bottom: 20px;
 }
 
 .nav-link {
@@ -37,4 +43,74 @@ body {
 
 .active {
   color: #fff;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+footer {
+  height: 50px;
+  background-color: #243E36;
+  margin-top: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #243E36;
+  color: white;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #243E36;
+  border-color: #C2A83E;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(123,168,130,.5);
+}
+
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color: #243E36;
+  border-color: #C2A83E;
+}
+
+.btn-primary:active {
+  background-color: #243E36;
+  border-color: #243E36;
+}
+
+.btn-primary:not([disabled]):not(.disabled).active:focus, .btn-primary:not([disabled]):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(123,168,130,.5);
+}
+
+.btn-primary:hover {
+  background-color: #7CA982;
+  color: #fff;
+  border-color: #243E36;
+}
+
+
+
+/* ==================== */
+
+@media only screen and (max-width: 768px) {
+
+
+  .form-control {
+      display: block;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: #C2A83E;
+    border-color: #243E36;
+  }
+
 }
