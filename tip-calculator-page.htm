@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:5500/sandbox-tip-calc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+  <!-- {{!-- Bootstrap --}} -->
+  <link rel="stylesheet" href="./tip-calculator-page_files/bootstrap.min.css">
+
+  <!-- {{!-- Google font --}} -->
+  <link href="./tip-calculator-page_files/css2" rel="stylesheet">
+
+  <!-- {{!-- favicon --}} -->
+  <link rel="icon" type="image" href="http://127.0.0.1:5500/public/assets/images/logo_FACIA.ico">
+
+  <!-- {{!-- CSS --}} -->
+  <link rel="stylesheet" href="./tip-calculator-page_files/styles.css" media="screen" title="no title" charset="utf-8">
+
+  <!-- {{!-- page title --}} -->
+  <title>FA¢IA™</title>
+
+</head>
+
+<body cz-shortcut-listen="true">
+
+  <!-- {{{body}}} -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <img src="./tip-calculator-page_files/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link active" href="http://127.0.0.1:5500/sandbox-tip-calc.html#">Budget<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5500/sandbox-tip-calc.html#">Stocks</a>
+        </li>
+        <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Calculator</a>
+            </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://127.0.0.1:5500/sandbox-tip-calc.html#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="http://127.0.0.1:5500/sandbox-tip-calc.html#">Tax Calculator</a>
+            <a class="dropdown-item" href="http://127.0.0.1:5500/sandbox-tip-calc.html#">Tip Calculator</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="http://127.0.0.1:5500/sandbox-tip-calc.html#">Currency Converter</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+    </div>
+  </nav>
+
+  <div id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- <h1>{{msg}}</h1> -->
+          <!-- <div class="alert text-center" role="alert">
+            <h1>Enter Financial Information to Calculate Your Budget</h1>
+          </div> -->
+
+
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <h4>Bill Amount</h4>
+              <!-- <label for="salary"></label> -->
+              <input type="text" id="bill" class="form-control" aria-describedby="bill" placeholder="$">
+            </div>
+            
+            <div class="col-md-6 col-xs-12 show">
+              <h4>Tip Percentage</h4>
+              <!-- <label for="budget"></label> -->
+              <button class="btn btn-secondary dropdown-toggle text-left" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
+                Select a Tip
+              </button>
+              <div class="dropdown-menu show" aria-labelledby="dropdownMenu2" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(15px, 74px, 0px);">
+                <button class="dropdown-item" type="button" id="ten-percent">10%</button>
+                <button class="dropdown-item" type="button" id="fifteen-percent">15%</button>
+                <button class="dropdown-item" type="button" id="twenty-percent">20%</button>
+                <button class="dropdown-item" type="button" id="twenty-five-percent">25%</button>
+              </div>
+            </div>
+          </div>
+
+          <form class="clearfix mb-4" action="http://127.0.0.1:5500/POST">
+
+
+            
+
+
+
+
+            <!-- <div class="form-group">
+                  <label for="example-description">Example Description</label>
+                  <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+                </div> -->
+            <button id="submit" class="btn btn-primary btn-submit btn-calculate float-right">Calculate</button>
+          </form>
+          <!-- <h3>Examples:</h3>
+              <ul id="example-list" class="list-group">
+                {{#each examples}}
+                <li data-id="{{this.id}}" class="list-group-item">
+                  <a href="example/{{this.id}}">{{this.text}}</a>
+                  <button class="btn btn-danger float-right delete">ｘ</button>
+                </li>
+                {{/each}}
+              </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="./tip-calculator-page_files/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="./tip-calculator-page_files/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="./tip-calculator-page_files/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
