@@ -13,3 +13,5 @@ CREATE TABLE user
 	PRIMARY KEY (id)
 	
 );
+
+SELECT * FROM faciaDB.user
