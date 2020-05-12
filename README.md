@@ -3,11 +3,17 @@
 # UTA-VIRT-FSF-PT-01-2020-U-LOL Project #2
 ![FACIA-banner-ad](/public/assets/images/bannerAd_FACIA.png)
 
-Felipe, Ashley, Catherine, Ian, Amit
+<div align="center">Felipe, Ashley, Catherine, Ian, Amit</div>
 
-[FACIA App on Heroku](https://pr0ject-2.herokuapp.com/)
+<div align="center">
 
-[FACIA Git Repo](https://github.com/zibrahim2046/Project2)
+[FACIA App on Heroku](https://pr0ject-2.herokuapp.com/)   |   [FACIA Git Repo](https://github.com/zibrahim2046/Project2)
+
+
+</br>
+
+
+</div>
 
 # Budgeting
 ![main-budget-page](public/assets/images/MainBudget-page.png)
