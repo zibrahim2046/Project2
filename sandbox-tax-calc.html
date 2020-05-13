@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
   <!-- {{!-- page title --}} -->
-  <title>Tip Calculator</title>
+  <title>Tax Calculator</title>
 
 </head>
 
@@ -48,8 +48,8 @@
             Calculators
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Tax Calculator</a>
             <a class="dropdown-item" href="#">Tip Calculator</a>
+            <a class="dropdown-item" href="#">Tax Calculator</a>
 
         </li>
         <!-- <li class="nav-item">
@@ -65,8 +65,8 @@
 
   <div id="home">
 
-    <!-- tip calculator content -->
-    <div class="container tip">
+    <!-- tax calculator content -->
+    <div class="container tax">
         <div class="col-12">
 
           <!-- <h1>{{msg}}</h1> -->
@@ -74,22 +74,22 @@
             <h1>Enter Financial Information to Calculate Your Budget</h1>
           </div> -->
 
-<!-- tip information -->
-          <div class="container tip-input-info">
+<!-- tax information -->
+          <div class="container tax-input-info">
             <div class="row">
               <div class="col-md-6 col-xs-12">
-                <h4>Bill Amount</h4>
+                <h4>Item Price</h4>
                 <!-- <label for="salary"></label> -->
                 <input type="number" step=".01" pattern="\d+" min="0" id="bill" class="form-control"
                   aria-describedby="bill" placeholder="$">
               </div>
 
               <div class="col-md-6 col-xs-12">
-                <h4>Tip Percentage</h4>
+                <h4>State</h4>
                 <!-- <label for="budget"></label> -->
                 <button class="btn btn-secondary dropdown-toggle text-left" type="button" id="dropdownMenu2"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100%;">
-                  Select a Tip
+                  Select a State
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <button class="dropdown-item" type="button" id="ten-percent">10%</button>
@@ -105,11 +105,11 @@
           </div>
 
 
-<!-- tip results -->
-          <div class="container tip-results">
+<!-- tax results -->
+          <div class="container tax-results">
             <div class="row">
               <div class="col-md-4 col-xs-12">
-                <h4>Bill Amount</h4>
+                <h4>Item Price</h4>
                 <!-- <label for="salary"></label> -->
                 <fieldset disabled>
                   <div class="form-group">
@@ -118,17 +118,17 @@
               </div>
 
               <div class="col-md-4 col-xs-12">
-                <h4>Tip Percentage</h4>
+                <h4>Sales Tax Rate</h4>
                 <!-- <label for="budget"></label> -->
 
                 <fieldset disabled>
                   <div class="form-group">
-                    <input type="text" id="tip-percentage" class="form-control" placeholder="20%">
+                    <input type="text" id="tax-percentage" class="form-control" placeholder="4%">
                   </div></fieldset>
               </div>
 
               <div class="col-md-4 col-xs-12">
-                <h4>Total Bill Amount</h4>
+                <h4>Total Item Price</h4>
                 <!-- <label for="salary"></label> -->
                 <div class="alert alert-primary total-bill" role="alert">
                   $##.##
@@ -137,7 +137,7 @@
 
             </div>
             <form class="clearfix mb-4" action="POST">
-              <button id="button-another-tip" class="btn btn-primary btn-submit btn-calculate float-right">Calculate Another Tip</button>
+              <button id="button-another-tax" class="btn btn-primary btn-submit btn-calculate float-right">Calculate Another Tax</button>
             </form>
           </div>
 
