@@ -203,7 +203,13 @@ h5 {
   color: #fff;
 }
 
-
+.total-bill {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  font-weight: 900;
+  color: #243E36;
+}
 /* ==================== */
 /* MEDIA QUERIES */
 /* ==================== */
