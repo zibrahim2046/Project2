@@ -1,38 +1,61 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+
+var name = $("#name");
+var salary = $("#salary");
+var rent = $("#rent");
+var gas = $("#gas");
+var groceries = $("#groceries");
+var utilities = $("#utilities");
+var phone = $("#phone");
+var car = $("#car");
+var misc = $("#misc");
+var entertainment = $("#entertainment");
+
+var user = {
+  name: name.val().trim(),
+  salary: salary.val().trim(),
+  rent: rent.val().trim(),
+  gas: gas.val().trim(),
+  groceries: groceries.val().trim(),
+  utilities: utilities.val().trim(),
+  phone: phone.val().trim(),
+  car: car.val().trim(),
+  misc: misc.val().trim(),
+  entertainment: entertainment.val().trim()
+
+  // description: $exampleDescription.val().trim()
+};
+
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveUser: function(userInfo) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/user",
+      data: JSON.stringify(userInfo)
     });
   },
-  getExamples: function() {
+  getUser: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/user",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteUser: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/user/" + id,
       type: "DELETE"
     });
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
+// refreshUser gets new user from the db and repopulates the list
+var refreshUser = function() {
+  API.getUser().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
         .text(example.text)
@@ -64,9 +87,9 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  
+
+    // description: $exampleDescription.val().trim()
   };
 
   if (!(example.text && example.description)) {
@@ -78,7 +101,7 @@ var handleFormSubmit = function(event) {
     refreshExamples();
   });
 
-  $exampleText.val("");
+  name.val("");
   $exampleDescription.val("");
 };
 
