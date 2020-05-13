@@ -26,7 +26,6 @@ var user = {
   // description: $exampleDescription.val().trim()
 };
 
-
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveUser: function(userInfo) {
@@ -84,13 +83,11 @@ var refreshUser = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+$("#submit").click(function(event) {
   event.preventDefault();
+  console.log(user);
 
-  
-
-    // description: $exampleDescription.val().trim()
-  };
+  // description: $exampleDescription.val().trim()
 
   if (!(example.text && example.description)) {
     alert("You must enter an example text and description!");
@@ -103,7 +100,7 @@ var handleFormSubmit = function(event) {
 
   name.val("");
   $exampleDescription.val("");
-};
+});
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
@@ -118,5 +115,4 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
