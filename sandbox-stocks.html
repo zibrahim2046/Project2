@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <!-- {{!-- Bootstrap --}} -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- {{!-- Google font --}} -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+
+  <!-- {{!-- favicon --}} -->
+  <link rel="icon" type="image" href="/public/assets/images/logo_FACIA.ico">
+
+  <!-- {{!-- CSS --}} -->
+  <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  
+  <!-- {{!-- page title --}} -->
+  <title>FA&cent;IA&trade;</title>
+
+</head>
+
+<body>
+
+    <!-- {{{body}}} -->
+
+    <nav class="navbar navbar-expand-lg">
+        <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link active" href="#">Budget</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stocks<span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Calculator</a>
+                </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Calculators
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Tax Calculator</a>
+                <a class="dropdown-item" href="#">Tip Calculator</a>
+            </li>
+            <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+        </div>
+      </nav>
+    
+
+    <div id="home">
+        <div class="container">
+          <div class="row">
+            <div class="col-8 offset-2">
+              <!-- this is determined in the routes, which API are we using for this and how can we call a graph or something to this page? -->
+              <!-- https://bootstrapious.com/p/bootstrap-sidebar -->
+              <h1>{{msg}}</h1>
+              <h2>Stocks and Financial News</h2>
+              <p>{{placeholder1}}</p>
+              <!-- https://polygon.io/docs/#get_v2_reference_markets_anchor -->
+              <!-- https://polygon.io/docs/#get_v1_meta_symbols__symbol__news_anchor ?maybe, due to needing the symbol inserted? -->
+              <hr>
+              <p>{{placeholder2}}</p>
+              <!-- https://polygon.io/docs/#get_v2_snapshot_locale_us_markets_stocks__direction__anchor -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="/js/index.js"></script>
+
+
+</body>
+
+</html>
