@@ -1,6 +1,25 @@
-# Project Starter
 
-In this activity we will add the provided boilerplate to group project repos.
+
+# UTA-VIRT-FSF-PT-01-2020-U-LOL Project #2
+![FACIA-banner-ad](/public/assets/images/bannerAd_FACIA.png)
+
+<div align="center">Felipe, Ashley, Catherine, Ian, Amit</div>
+
+<div align="center">
+
+[FACIA App on Heroku](https://pr0ject-2.herokuapp.com/)   |   [FACIA Git Repo](https://github.com/zibrahim2046/Project2)
+
+
+</br>
+
+
+</div>
+
+# Budgeting
+![main-budget-page](public/assets/images/MainBudget-page.png)
+
+</br></br>
+
 
 ## Instructions
 
@@ -36,3 +55,24 @@ In this activity we will add the provided boilerplate to group project repos.
 * Discuss as a group:
 
   * How would you now add changes to this project?
+
+</br></br>
+
+# Tip Calculator
+![main-budget-page](public/assets/images/TipCalculator-page.png)
+</br></br>
+
+# Error: 404 Page Not Found
+When the user tries to access an invalid URL, we display a 404 page.
+![main-budget-page](public/assets/images/Error404-page.png)
+</br></br>
+
+### This Project:
+* Utilizes a Node and Express Web Server
+* Is backed by a MySQL Database with a Sequelize ORM
+* Uses both GET and POST routes for retrieving and adding new data
+* Is deployed using Heroku (with Data)
+* Incorporates **at least one new library, package, or technology that we haven’t discussed**
+* Has a polished frontend/UI
+* Is organized by a folder structure that meets MVC Paradigm
+* Meets good quality coding standards (indentation, scoping, naming)

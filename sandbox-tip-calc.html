@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
   <!-- {{!-- page title --}} -->
-  <title>FA&cent;IA&trade;</title>
+  <title>Tip Calculator</title>
 
 </head>
 
@@ -71,89 +71,41 @@
         <div class="col-12">
 
           <!-- <h1>{{msg}}</h1> -->
-          <div class="alert text-center" role="alert">
+          <!-- <div class="alert text-center" role="alert">
             <h1>Enter Financial Information to Calculate Your Budget</h1>
-          </div>
+          </div> -->
 
 
           <div class="row">
             <div class="col-md-6 col-xs-12">
-              <h4>Name</h4>
+              <h4>Bill Amount</h4>
               <!-- <label for="salary"></label> -->
-              <input type="text" id="name" class="form-control" aria-describedby="name" placeholder="Name (required)">
+              <input type="text" id="bill" class="form-control" aria-describedby="bill" placeholder="$">
             </div>
-            
+
             <div class="col-md-6 col-xs-12">
-              <h4>Salary</h4>
+              <h4>Tip Percentage</h4>
               <!-- <label for="budget"></label> -->
-              <input type="number" step="1" pattern="\d+" min="0" id="salary" class="form-control"
-                aria-describedby="salary" placeholder="Enter Yearly Salary Here">
+              <button class="btn btn-secondary dropdown-toggle text-left" type="button" id="dropdownMenu2"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100%;">
+                Select a Tip
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button" id="ten-percent">10%</button>
+                <button class="dropdown-item" type="button" id="fifteen-percent">15%</button>
+                <button class="dropdown-item" type="button" id="twenty-percent">20%</button>
+                <button class="dropdown-item" type="button" id="twenty-five-percent">25%</button>
+              </div>
             </div>
           </div>
 
-          <h4>Expenses</h4>
           <form class="clearfix mb-4" action="POST">
-
-
-            <div class="row">
-
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="rent"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="rent" class="form-control"
-                  aria-describedby="rent" placeholder="Monthly Rent Expense">
-              </div>
-              
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="gas"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="gas" class="form-control" aria-describedby="gas"
-                  placeholder="Monthly Gas Allowance">
-              </div>
-
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="groceries"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="groceries" class="form-control"
-                  aria-describedby="groceries" placeholder="Monthly Groceries Expense">
-              </div>
-
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="utilities"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="utilities" class="form-control"
-                  aria-describedby="gas" placeholder="Monthly Utilities Expense"></div>
-
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="phone"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="phone" class="form-control"
-                  aria-describedby="phone" placeholder="Monthly Phone Expense"></div>
-              
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="car"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="car" class="form-control" aria-describedby="gas"
-                  placeholder="Monthly Car Expense">
-              </div>
-
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="misc"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="phone" class="form-control"
-                  aria-describedby="misc" placeholder="Misc. Monthly Expenses">
-              </div>
-              
-              <div class="col-md-6 col-xs-12">
-                <!-- <label for="entertainment"></label> -->
-                <input type="number" step="1" pattern="\d+" min="0" id="entertainment" class="form-control"
-                  aria-describedby="entertainment" placeholder="Monthly Entertainment Allowance">
-              </div>
-
-            </div>
-
-
-
-
 
             <!-- <div class="form-group">
                   <label for="example-description">Example Description</label>
                   <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
                 </div> -->
-            <button id="submit" class="btn btn-primary btn-submit float-right">Submit</button>
+            <button id="submit" class="btn btn-primary btn-submit btn-calculate float-right">Calculate</button>
           </form>
           <!-- <h3>Examples:</h3>
               <ul id="example-list" class="list-group">
@@ -166,7 +118,13 @@
               </ul> -->
         </div>
       </div>
+
+
+
+
     </div>
+
+  </div>
   </div>
 
   <footer>
