@@ -91,7 +91,7 @@
           </div>
 
           <h4>Expenses</h4>
-          <form class="clearfix mb-4" action="POST">
+          <form class="clearfix mb-4">
 
 
             <div class="row">
@@ -132,7 +132,7 @@
 
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="misc"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="phone" class="form-control"
+                <input type="number" step=".01" pattern="\d+" min="0" id="misc" class="form-control"
                   aria-describedby="misc" placeholder="Misc. Monthly Expenses">
               </div>
               
@@ -152,7 +152,7 @@
                   <label for="example-description">Example Description</label>
                   <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
                 </div> -->
-            <button id="submit" class="btn btn-primary btn-submit float-right">Submit</button>
+            <button type="submit" id="submit" class="btn btn-primary btn-submit float-right">Submit</button>
           </form>
           <!-- <h3>Examples:</h3>
               <ul id="example-list" class="list-group">
@@ -175,7 +175,7 @@
     </div>
   </footer>
 
-
+<script src="../public/js/index.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
