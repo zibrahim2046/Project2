@@ -81,7 +81,7 @@
               <!-- <label for="salary"></label> -->
               <input type="text" id="name" class="form-control" aria-describedby="name" placeholder="Name (required)">
             </div>
-            
+
             <div class="col-md-6 col-xs-12">
               <h4>Salary</h4>
               <!-- <label for="budget"></label> -->
@@ -98,55 +98,94 @@
 
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="rent"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="rent" class="form-control"
-                  aria-describedby="rent" placeholder="Monthly Rent Expense">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="rent" class="form-control"
+                    aria-describedby="rent" placeholder="Monthly Rent Expense">
+                </div>
+
               </div>
-              
+
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="gas"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="gas" class="form-control" aria-describedby="gas"
-                  placeholder="Monthly Gas Allowance">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="gas" class="form-control"
+                    aria-describedby="gas" placeholder="Monthly Gas Allowance">
+                </div>
               </div>
 
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="groceries"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="groceries" class="form-control"
-                  aria-describedby="groceries" placeholder="Monthly Groceries Expense">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="groceries" class="form-control"
+                    aria-describedby="groceries" placeholder="Monthly Groceries Expense">
+                </div>
               </div>
 
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="utilities"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="utilities" class="form-control"
-                  aria-describedby="gas" placeholder="Monthly Utilities Expense"></div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="utilities" class="form-control"
+                    aria-describedby="gas" placeholder="Monthly Utilities Expense">
+                </div>
+              </div>
 
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="phone"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="phone" class="form-control"
-                  aria-describedby="phone" placeholder="Monthly Phone Expense"></div>
-              
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="phone" class="form-control"
+                    aria-describedby="phone" placeholder="Monthly Phone Expense">
+                </div>
+              </div>
+
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="car"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="car" class="form-control" aria-describedby="gas"
-                  placeholder="Monthly Car Expense">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="car" class="form-control"
+                    aria-describedby="gas" placeholder="Monthly Car Expense">
+                </div>
               </div>
 
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="misc"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="misc" class="form-control"
-                  aria-describedby="misc" placeholder="Misc. Monthly Expenses">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="misc" class="form-control"
+                    aria-describedby="misc" placeholder="Misc. Monthly Expenses">
+                </div>
               </div>
-              
+
               <div class="col-md-6 col-xs-12">
                 <!-- <label for="entertainment"></label> -->
-                <input type="number" step=".01" pattern="\d+" min="0" id="entertainment" class="form-control"
-                  aria-describedby="entertainment" placeholder="Monthly Entertainment Allowance">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="entertainment" class="form-control"
+                    aria-describedby="entertainment" placeholder="Monthly Entertainment Allowance">
+                </div>
               </div>
 
             </div>
-
-
-
-
 
             <!-- <div class="form-group">
                   <label for="example-description">Example Description</label>
@@ -174,7 +213,6 @@
 
     </div>
   </footer>
-
 
   <!-- Bootstrap JS -->
   <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
