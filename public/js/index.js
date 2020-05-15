@@ -1,39 +1,34 @@
-// Get references to page elements
+var user = {};
 
-// The API object contains methods for each kind of request we'll make
 var API = {
   saveUser: function(user) {
     return $.ajax({
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       type: "POST",
       url: "api/user",
-      data: JSON.stringify(user)
+      data: JSON.stringify(user),
     });
   },
   getUser: function() {
     return $.ajax({
       url: "api/user",
-      type: "GET"
+      type: "GET",
     });
   },
   deleteUser: function(id) {
     return $.ajax({
       url: "api/user/" + id,
-      type: "DELETE"
+      type: "DELETE",
     });
-  }
+  },
 };
 
-// refreshUser gets new user from the db and repopulates the list
-
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
 $("#submit").click(function(event) {
   event.preventDefault();
 
-  var user = {
+  user = {
     name: $("#name")
       .val()
       .trim(),
@@ -63,36 +58,38 @@ $("#submit").click(function(event) {
       .trim(),
     entertainment: $("#entertainment")
       .val()
-      .trim()
-
-    // description: $exampleDescription.val().trim()
+      .trim(),
   };
 
-  // description: $exampleDescription.val().trim()
-
-  // if (!(example.text && example.description)) {
-  //   alert("You must enter an example text and description!");
-  //   return;
-  // }
-
-  API.saveUser(user).then(function() {
-    refreshUser();
-  });
-
-  // $exampleDescription.val("");
+  API.saveUser(user);
+  budgetCalc();
 });
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-// var handleDeleteBtnClick = function() {
-//   var idToDelete = $(this)
-//     .parent()
-//     .attr("data-id");
+//var calculation;
 
-//   API.deleteExample(idToDelete).then(function() {
-//     refreshExamples();
-//   });
-// };
+function budgetCalc() {
+  var reducer = function(accumulator, currentValue) {
+    accumulator + currentValue;
+  };
+  // var monthlySalary = user.salary / 12;
+  var rawTotalExpenses = [
+    user.rent,
+    user.gas,
+    user.groceries,
+    user.utilities,
+    user.phone,
+    user.car,
+    user.misc,
+    user.entertainment,
+  ];
 
-// Add event listeners to the submit and delete buttons
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+  var newTotalExpenses = [];
+
+  for (var i = 0; i < rawTotalExpenses.length; i++) {
+    var parsed = parseInt(rawTotalExpenses[i]);
+    newTotalExpenses.push(parsed);
+  }
+  console.log(newTotalExpenses.reduce(reducer));
+  // var calculation = monthlySalary - totalExpenses;
+  console.log(newTotalExpenses);
+}
