@@ -32,9 +32,9 @@ function theNews() {
           newsDiv.append(h4);
           newsDiv.append(links);
           newsDiv.append(newsImage);
-          newsDiv.append("<hr>");
 
           newsDiv.append(links);
+          newsDiv.append("<hr>");
 
 
           $("#allNews").append(newsDiv);
