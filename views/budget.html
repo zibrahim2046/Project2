@@ -46,13 +46,12 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Calculators
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="tax-calc.html">Tax Calculator</a>
-            <a class="dropdown-item" href="tip-calc.html">Tip Calculator</a>
-            
-          </div>
-        </li>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="tax-calc.html">Tax Calculator</a>
+              <a class="dropdown-item" href="tip-calc.html">Tip Calculator</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Currency Converter</a>
+          </li>
         <!-- <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li> -->
@@ -83,7 +82,7 @@
             </div>
 
             <div class="col-md-6 col-xs-12">
-              <h4>Salary</h4>
+              <h4>Salary (after taxes)</h4>
               <!-- <label for="budget"></label> -->
               <input type="number" step=".01" pattern="\d+" min="0" id="salary" class="form-control"
                 aria-describedby="salary" placeholder="Enter Yearly Salary Here">
@@ -202,6 +201,19 @@
                 </li>
                 {{/each}}
               </ul> -->
+
+              <!-- results after function calculations are run -->
+              <div class="card">
+                <div class="card-header">
+                  Your Resulting Budget is:
+                </div>
+                <div class="budget-result text-center">
+                  {result}
+                </div>
+              </div>
+
+
+
         </div>
       </div>
     </div>
