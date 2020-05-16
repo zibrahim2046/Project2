@@ -80,7 +80,7 @@ function budgetCalc() {
     user.phone,
     user.car,
     user.misc,
-    user.entertainment,
+    user.entertainment
   ];
 
   var newTotalExpenses = [];
