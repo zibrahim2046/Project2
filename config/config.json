@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "M@rch201995",
-    "database": "faciaDB",
-    "host": "localhost",
+    "username": "tqbkfajw97cwnbnc",
+    "password": "rmnxnjwgxfd4tkqb",
+    "database": "ozfl596o62i41koy",
+    "host": "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	",
     "dialect": "mysql"
   },
   "test": {
