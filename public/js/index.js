@@ -66,13 +66,11 @@ $("#submit").click(function(event) {
 });
 
 //var calculation;
+var rawTotalExpenses;
+var newTotalExpenses = [];
 
 function budgetCalc() {
-  var reducer = function(accumulator, currentValue) {
-    accumulator + currentValue;
-  };
-  // var monthlySalary = user.salary / 12;
-  var rawTotalExpenses = [
+  rawTotalExpenses = [
     user.rent,
     user.gas,
     user.groceries,
@@ -80,16 +78,24 @@ function budgetCalc() {
     user.phone,
     user.car,
     user.misc,
-    user.entertainment
+    user.entertainment,
   ];
-
-  var newTotalExpenses = [];
 
   for (var i = 0; i < rawTotalExpenses.length; i++) {
     var parsed = parseInt(rawTotalExpenses[i]);
     newTotalExpenses.push(parsed);
   }
-  console.log(newTotalExpenses.reduce(reducer));
-  // var calculation = monthlySalary - totalExpenses;
-  console.log(newTotalExpenses);
+  setTimeout(callBackTest(), 4000);
+}
+
+function callBackTest() {
+  var reducer = function(accumulator, currentValue) {
+    return accumulator + currentValue;
+  };
+  var calculatedExpenses = newTotalExpenses.reduce(reducer, 0);
+  var monthlySalary = user.salary / 12;
+  var calculation = Math.round(monthlySalary - calculatedExpenses);
+  console.log(calculation);
+
+  $( ".budget-result" ).append( `<p>\$${calculation}</p>` );
 }

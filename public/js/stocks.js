@@ -1,55 +1,47 @@
 function theNews() {
-    var queryURL = "https://finnhub.io/api/v1/news?category=general&token=bquu67nrh5rcepltr9jg";
+  var queryURL =
+    "https://finnhub.io/api/v1/news?category=general&token=bquu67nrh5rcepltr9jg";
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      .then(function(response) {
-        var results = response;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    var results = response;
 
-        for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 5; i++) {
+      var newsDiv = $("<div>").addClass("news");
 
-          var newsDiv = $("<div>")
-          .addClass("news");
+      var h4 = $("<h4>").text(results[i].headline);
 
-          var h4 = $("<h4>").text(results[i].headline);
+      var links = $("<h6>").text(results[i].url);
 
-          var links = $("<h6>").text(results[i].url);
+      var links = $("<a>")
+        .text("Read More")
+        .addClass("btn-primary btn-stocks-link")
+        .attr("href", results[i].url);
 
-          var links = $("<a>")
-          .text("Read More")
-          .addClass("btn-primary btn-stocks-link")
-          .attr("href", results[i].url)
+      var rule = "<hr />";
 
-          var rule = '<hr />'
+      var newsImage = $("<img>");
 
+      newsImage.attr("src", results[i].image);
 
-          var newsImage = $("<img>");
+      newsImage.attr("style", "width:500px");
 
-          newsImage.attr("src", results[i].image);
+      newsDiv.append(h4);
+      newsDiv.append(links);
+      newsDiv.append(newsImage);
+      newsDiv.append("<hr>");
 
-          newsImage.attr("style", "width:500px");
+      newsDiv.append(links);
 
-          newsDiv.append(h4);
-          newsDiv.append(links);
-          newsDiv.append(newsImage);
-          newsDiv.append("<hr>");
+      $("#allNews").append(newsDiv);
+      $("#allNews").append(rule);
+    }
+  });
+}
 
-          newsDiv.append(links);
-
-
-          $("#allNews").append(newsDiv);
-          $("#allNews").append(rule);
-
-
-        }
-      });
-  };
-
-  theNews();
-
-
+theNews();
 
 //   function companyProfile() {
 //     var stockCompanies = ["MSFT", "AAPL", "NVDA", "CSCO", "NFLX", "INTC"];
@@ -78,7 +70,6 @@ function theNews() {
 
 //           var companyShareOutstanding = $("<h2>").text(results[i].shareOutstanding);
 
-          
 //           profileDiv.append(companyLogo);
 //           profileDiv.append(companyName);
 //           profileDiv.append(companyTicker);
