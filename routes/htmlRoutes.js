@@ -9,10 +9,6 @@ module.exports = function(app) {
   app.get("/tipcalc", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "tip-calc.html"));
   });
-<<<<<<< HEAD
-
-=======
->>>>>>> f2ce37651d6d333daef08cc793415d5b9fec36bb
   app.get("/taxcalc", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "tax-calc.html"));
   });
