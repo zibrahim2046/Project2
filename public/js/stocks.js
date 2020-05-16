@@ -8,23 +8,40 @@ function theNews() {
       .then(function(response) {
         var results = response;
 
-        for (var i = 0; i < results.length; i++) {
+        for (var i = 0; i < 5; i++) {
 
-          var newsDiv = $("<div>");
+          var newsDiv = $("<div>")
+          .addClass("news");
 
           var h4 = $("<h4>").text(results[i].headline);
 
-        //   var readMore = $(`<a href=" ${ + results[i].url + } ">Read More...</a>`);
+          var links = $("<h6>").text(results[i].url);
+
+          var links = $("<a>")
+          .text("Read More")
+          .addClass("btn-primary btn-stocks-link")
+          .attr("href", results[i].url)
+
+          var rule = '<hr />'
+
 
           var newsImage = $("<img>");
+
           newsImage.attr("src", results[i].image);
-          newsImage.attr("style", "width:250px");
+
+          newsImage.attr("style", "width:500px");
 
           newsDiv.append(h4);
         //   newsDiv.append(readMore);
           newsDiv.append(newsImage);
 
+          newsDiv.append(links);
+
+
           $("#allNews").append(newsDiv);
+          $("#allNews").append(rule);
+
+
         }
       });
   };
