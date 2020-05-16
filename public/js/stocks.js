@@ -1,5 +1,5 @@
 function theNews() {
-    var queryURL = "https://finnhub.io/api/v1/news?category=general&token=bqsv227rh5re54ulror0";
+    var queryURL = "https://finnhub.io/api/v1/news?category=general&token=bquu67nrh5rcepltr9jg";
 
     $.ajax({
       url: queryURL,
@@ -14,15 +14,20 @@ function theNews() {
 
           var h4 = $("<h4>").text(results[i].headline);
 
-        //   var readMore = $(`<a href=" ${ + results[i].url + } ">Read More...</a>`);
+          var links = $("<a>")
+          .text("Read More")
+          .addClass("btn-primary")
+          .attr("href", results[i].url)
+          .attr("style", )
 
           var newsImage = $("<img>");
           newsImage.attr("src", results[i].image);
           newsImage.attr("style", "width:250px");
 
           newsDiv.append(h4);
-        //   newsDiv.append(readMore);
+          newsDiv.append(links);
           newsDiv.append(newsImage);
+          newsDiv.append("<hr>");
 
           $("#allNews").append(newsDiv);
         }
@@ -30,3 +35,47 @@ function theNews() {
   };
 
   theNews();
+
+
+
+//   function companyProfile() {
+//     var stockCompanies = ["MSFT", "AAPL", "NVDA", "CSCO", "NFLX", "INTC"];
+//     var queryURL = "https://finnhub.io/api/v1/stock/profile2?symbol=" + stockCompanies + "&token=bquu67nrh5rcepltr9jg";
+
+//     $.ajax({
+//       url: queryURL,
+//       method: "GET"
+//     })
+//       .then(function(response) {
+//         var results = response;
+
+//         for (var i = 0; i < results.length; i++) {
+
+//           var profileDiv = $("<div>");
+
+//           var companyLogo = $("<img>");
+//           companyLogo.attr("src", results[i].logo);
+//           companyLogo.attr("style", "width:100px");
+
+//           var companyName = $("<h2>").text(results[i].name);
+
+//           var companyTicker = $("<h2>").text(results[i].ticker);
+
+//           var companyExchange = $("<h2>").text(results[i].exchange);
+
+//           var companyShareOutstanding = $("<h2>").text(results[i].shareOutstanding);
+
+          
+//           profileDiv.append(companyLogo);
+//           profileDiv.append(companyName);
+//           profileDiv.append(companyTicker);
+//           profileDiv.append(companyExchange);
+//           profileDiv.append(companyShareOutstanding);
+//           profileDiv.append("<hr>");
+
+//           $("#companyProfiles").append(profileDiv);
+//         }
+//       });
+//   };
+
+//   companyProfile();
