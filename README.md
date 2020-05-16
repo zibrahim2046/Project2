@@ -1,6 +1,7 @@
 
 
 # UTA-VIRT-FSF-PT-01-2020-U-LOL Project #2
+
 ![FACIA-banner-ad](/public/assets/images/bannerAd_FACIA.png)
 
 <div align="center">Felipe, Ashley, Catherine, Ian, Amit</div>
@@ -8,6 +9,8 @@
 <div align="center">
 
 [FACIA App on Heroku](https://pr0ject-2.herokuapp.com/)   |   [FACIA Git Repo](https://github.com/zibrahim2046/Project2)
+
+[Presentation](https://docs.google.com/presentation/d/11XIXUa12HQBzGGCEjEBGNB6v8zZXg0ODZb5UhqJjr0M/edit#slide=id.p1)
 
 
 </br>
@@ -28,6 +31,11 @@ Tip Calculator calculates total bill amount from bill amount and desired tip per
 # Tax Calculator
 Tax Calculator calculates total price from item price and tax rate by state.
 ![tax-calc-page](public/assets/images/TaxCalculator-page.png)
+</br></br>
+
+# Stocks
+Stocks page returns current financial news from https://polygon.io/ API.
+![stocks-page](public/assets/images/Stocks-page.png)
 </br></br>
 
 # Currency Converter
