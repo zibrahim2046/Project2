@@ -11,6 +11,9 @@ module.exports = function(app) {
   app.get("/taxcalc", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "tax-calc.html"));
   });
+  app.get("/currency", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views", "currency-converter.html"));
+  });
 
   app.get("/stocks", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "stocks.html"));
