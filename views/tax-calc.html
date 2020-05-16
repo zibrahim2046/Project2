@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- {{!-- Bootstrap --}} -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- {{!-- Google font --}} -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+
+  <!-- {{!-- favicon --}} -->
+  <link rel="icon" type="image" href="public/assets/images/logo_FACIA.ico">
+
+  <!-- {{!-- CSS --}} -->
+  <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+  <!-- {{!-- page title --}} -->
+  <title>Tip Calculator</title>
+
+</head>
+
+<body>
+
+  <!-- {{{body}}} -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link active" href="sandbox.html">Budget<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sandbox-stocks.html">Stocks</a>
+        </li>
+        <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Calculator</a>
+            </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="sandbox-tax-calc.html">Tax Calculator</a>
+            <a class="dropdown-item" href="sandbox-tip-calc.html">Tip Calculator</a>
+
+        </li>
+        <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+    </div>
+  </nav>
+
+  <div id="home">
+
+    <!-- tip calculator content -->
+    <div class="container tip">
+        <div class="col-12">
+
+          <!-- <h1>{{msg}}</h1> -->
+          <!-- <div class="alert text-center" role="alert">
+            <h1>Enter Financial Information to Calculate Your Budget</h1>
+          </div> -->
+
+<!-- tip information -->
+          <div class="container tip-input-info">
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <h4>Bill Amount</h4>
+                <!-- <label for="salary"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                <input type="number" step=".01" pattern="\d+" min="0" id="bill" class="form-control"
+                  aria-describedby="bill" placeholder="">
+              </div>
+            </div>
+
+              <div class="col-md-6 col-xs-12">
+                <h4>Tip Percentage</h4>
+                <!-- <label for="budget"></label> -->
+                <button class="btn btn-secondary dropdown-toggle text-left" type="button" id="dropdownMenu2"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100%;">
+                  Select a Tip
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button" id="ten-percent">10%</button>
+                  <button class="dropdown-item" type="button" id="fifteen-percent">15%</button>
+                  <button class="dropdown-item" type="button" id="twenty-percent">20%</button>
+                  <button class="dropdown-item" type="button" id="twenty-five-percent">25%</button>
+                </div>
+              </div>
+            </div>
+            <form class="clearfix mb-4" action="POST">
+              <button id="calculate-tip" class="btn btn-primary btn-submit btn-calculate float-right">Calculate</button>
+            </form>
+          </div>
+
+
+<!-- tip results -->
+          <div class="container tip-results">
+            <div class="row">
+              <div class="col-md-4 col-xs-12">
+                <h4>Bill Amount</h4>
+                <!-- <label for="salary"></label> -->
+                <fieldset disabled>
+                   <div class="form-group">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text dollar-sign">$</span>
+                      </div>
+                    <input type="text" id="bill" class="form-control" placeholder="{user's bill amount}"></div>
+                  </div></fieldset>
+              </div>
+
+              <div class="col-md-4 col-xs-12">
+                <h4>Tip Percentage</h4>
+                <!-- <label for="budget"></label> -->
+
+                <fieldset disabled>
+                  <div class="form-group">
+                    <input type="text" id="tip-percentage" class="form-control" placeholder="{what the user chose}">
+                  </div></fieldset>
+              </div>
+
+              <div class="col-md-4 col-xs-12">
+                <h4>Total Bill Amount</h4>
+                <!-- <label for="salary"></label> -->
+                <div class="alert alert-primary total-bill" role="alert">
+                  {result}
+                </div>
+              </div>
+
+            </div>
+            <form class="clearfix mb-4" action="POST">
+              <button id="button-another-tip" class="btn btn-primary btn-submit btn-calculate float-right">Calculate Another Tip</button>
+            </form>
+          </div>
+
+=======
+    <!-- {{{body}}} -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link active" href="#">Budget<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Stocks</a>
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Calculator</a>
+            </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Calculators
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Tip Calculator</a>
+                        <a class="dropdown-item" href="#">Tax Calculator</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Currency Converter</a>
+
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
+    </nav>
+
+    <div id="home">
+
+        <!-- tax calculator content -->
+        <div class="container tax">
+            <div class="col-12">
+
+                <!-- <h1>{{msg}}</h1> -->
+                <!-- <div class="alert text-center" role="alert">
+            <h1>Enter Financial Information to Calculate Your Budget</h1>
+          </div> -->
+
+                <!-- tax information -- will disappear when function is run -->
+                <div class="container tax-input-info">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <h4>Item Price</h4>
+                            <!-- <label for="salary"></label> -->
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text dollar-sign">$</span>
+                                </div>
+                                <input type="number" step=".01" pattern="\d+" min="0" id="bill" class="form-control"
+                                    aria-describedby="bill" placeholder="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xs-12">
+                            <h4>State</h4>
+                            <!-- <label for="budget"></label> -->
+                            <button class="btn btn-secondary dropdown-toggle text-left" type="button" id="dropdownMenu2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100%;">
+                                Select a State
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" id="AL">AL (4.00%)</button>
+                                <button class="dropdown-item" id="AK">AK (0.00%)</button>
+                                <button class="dropdown-item" id="AZ">AZ (5.60%)</button>
+                                <button class="dropdown-item" id="AR">AR (6.50%)</button>
+                                <button class="dropdown-item" id="CA">CA (7.25%)</button>
+                                <button class="dropdown-item" id="CO">CO (2.90%)</button>
+                                <button class="dropdown-item" id="CT">CT (6.35%)</button>
+                                <button class="dropdown-item" id="DC">D.C. (6.00%)</button>
+                                <button class="dropdown-item" id="DE">DE (0.00%)</button>
+                                <button class="dropdown-item" id="FL">FL (6.00%)</button>
+                                <button class="dropdown-item" id="GA">GA (4.00%)</button>
+                                <button class="dropdown-item" id="HI">HI (4.00%)</button>
+                                <button class="dropdown-item" id="ID">ID (6.00%)</button>
+                                <button class="dropdown-item" id="IL">IL (6.25%)</button>
+                                <button class="dropdown-item" id="IN">IN (7.00%)</button>
+                                <button class="dropdown-item" id="IA">IA (6.00%)</button>
+                                <button class="dropdown-item" id="KS">KS (6.50%)</button>
+                                <button class="dropdown-item" id="KY">KY (6.00%)</button>
+                                <button class="dropdown-item" id="LA">LA (4.45%)</button>
+                                <button class="dropdown-item" id="ME">ME (5.50%)</button>
+                                <button class="dropdown-item" id="MD">MD (6.25%)</button>
+                                <button class="dropdown-item" id="MA">MA (6.00%)</button>
+                                <button class="dropdown-item" id="MI">MI (6.00%)</button>
+                                <button class="dropdown-item" id="MN">MN (6.88%)</button>
+                                <button class="dropdown-item" id="MS">MS (7.00%)</button>
+                                <button class="dropdown-item" id="MO">MO (4.23%)</button>
+                                <button class="dropdown-item" id="MT">MT (0.00%)</button>
+                                <button class="dropdown-item" id="NE">NE (4.75%)</button>
+                                <button class="dropdown-item" id="NV">NV (5.00%)</button>
+                                <button class="dropdown-item" id="NH">NH (0.00%)</button>
+                                <button class="dropdown-item" id="NJ">NJ (6.63%)</button>
+                                <button class="dropdown-item" id="NM">NM (5.13%)</button>
+                                <button class="dropdown-item" id="NY">NY (4.00%)</button>
+                                <button class="dropdown-item" id="NC">NC (5.50%)</button>
+                                <button class="dropdown-item" id="ND">ND (6.85%)</button>
+                                <button class="dropdown-item" id="OH">OH (5.75%)</button>
+                                <button class="dropdown-item" id="OK">OK (4.50%)</button>
+                                <button class="dropdown-item" id="OR">OR (0.00%)</button>
+                                <button class="dropdown-item" id="PA">PA (6.00%)</button>
+                                <button class="dropdown-item" id="RI">RI (7.00%)</button>
+                                <button class="dropdown-item" id="SC">SC (6.00%)</button>
+                                <button class="dropdown-item" id="SD">SD (4.50%)</button>
+                                <button class="dropdown-item" id="TN">TN (7.00%)</button>
+                                <button class="dropdown-item" id="TX">TX (6.25%)</button>
+                                <button class="dropdown-item" id="UT">UT (6.10%)</button>
+                                <button class="dropdown-item" id="VT">VT (5.30%)</button>
+                                <button class="dropdown-item" id="VA">VA (6.00%)</button>
+                                <button class="dropdown-item" id="WA">WA (6.00%)</button>
+                                <button class="dropdown-item" id="WV">WV (6.50%)</button>
+                                <button class="dropdown-item" id="WI">WI (5.00%)</button>
+                                <button class="dropdown-item" id="WY">WY (4.00%)</button>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <form class="clearfix mb-4" action="POST">
+                        <button id="calculate-tip"
+                            class="btn btn-primary btn-submit btn-calculate float-right">Calculate</button>
+                    </form>
+                </div>
+
+
+                <!-- tax results -- will display when the function is calculated -->
+                <div class="container tax-results">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <h4>Item Price</h4>
+                            <!-- <label for="salary"></label> -->
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text dollar-sign">$</span>
+                                        </div>
+                                        <input type="text" id="bill" class="form-control" placeholder="">
+                                    </div>
+                                </div 
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <h4>Sales Tax Rate</h4>
+                            <!-- <label for="budget"></label> -->
+
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    <input type="text" id="tax-percentage" class="form-control" placeholder="4%">
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-4 col-xs-12">
+                            <h4>Total Item Price</h4>
+                            <!-- <label for="salary"></label> -->
+                            <div class="alert alert-primary total-bill" role="alert">
+                                {result}
+                            </div>
+                        </div>
+
+                    </div>
+                    <form class="clearfix mb-4" action="POST">
+                        <button id="button-another-tax"
+                            class="btn btn-primary btn-submit btn-calculate float-right">Calculate
+                            Another Tax</button>
+                    </form>
+                </div>
+
+
+
+
+          <!-- <h3>Examples:</h3>
+              <ul id="example-list" class="list-group">
+                {{#each examples}}
+                <li data-id="{{this.id}}" class="list-group-item">
+                  <a href="example/{{this.id}}">{{this.text}}</a>
+                  <button class="btn btn-danger float-right delete">ｘ</button>
+                </li>
+                {{/each}}
+              </ul> -->
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

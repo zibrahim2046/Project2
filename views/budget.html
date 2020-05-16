@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- {{!-- Bootstrap --}} -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+  <!-- {{!-- Google font --}} -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
+
+  <!-- {{!-- favicon --}} -->
+  <link rel="icon" type="image" href="public/assets/images/logo_FACIA.ico">
+
+  <!-- {{!-- CSS --}} -->
+  <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+
+  <!-- {{!-- page title --}} -->
+  <title>FA&cent;IA&trade;</title>
+
+</head>
+
+<body>
+
+  <!-- {{{body}}} -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link active" href="budget.html">Budget<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stocks.html">Stocks</a>
+        </li>
+        <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Calculator</a>
+            </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Calculators
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="tax-calc.html">Tax Calculator</a>
+            <a class="dropdown-item" href="tip-calc.html">Tip Calculator</a>
+            
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+      </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+    </div>
+  </nav>
+
+  <div id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <!-- <h1>{{msg}}</h1> -->
+          <div class="alert text-center" role="alert">
+            <h1>Enter Financial Information to Calculate Your Budget</h1>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6 col-xs-12">
+              <h4>Name</h4>
+              <!-- <label for="salary"></label> -->
+              <input type="text" id="name" class="form-control" aria-describedby="name" placeholder="Name (required)">
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+              <h4>Salary (after taxes)</h4>
+              <!-- <label for="budget"></label> -->
+              <input type="number" step=".01" pattern="\d+" min="0" id="salary" class="form-control"
+                aria-describedby="salary" placeholder="Enter Yearly Salary Here">
+            </div>
+          </div>
+
+          <h4>Expenses</h4>
+          <form class="clearfix mb-4">
+
+
+            <div class="row">
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="rent"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="rent" class="form-control"
+                    aria-describedby="rent" placeholder="Monthly Rent Expense">
+                </div>
+
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="gas"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="gas" class="form-control"
+                    aria-describedby="gas" placeholder="Monthly Gas Allowance">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="groceries"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="groceries" class="form-control"
+                    aria-describedby="groceries" placeholder="Monthly Groceries Expense">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="utilities"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="utilities" class="form-control"
+                    aria-describedby="gas" placeholder="Monthly Utilities Expense">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="phone"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="phone" class="form-control"
+                    aria-describedby="phone" placeholder="Monthly Phone Expense">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="car"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="car" class="form-control"
+                    aria-describedby="gas" placeholder="Monthly Car Expense">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="misc"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="misc" class="form-control"
+                    aria-describedby="misc" placeholder="Misc. Monthly Expenses">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <!-- <label for="entertainment"></label> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text dollar-sign">$</span>
+                  </div>
+                  <input type="number" step=".01" pattern="\d+" min="0" id="entertainment" class="form-control"
+                    aria-describedby="entertainment" placeholder="Monthly Entertainment Allowance">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="form-group">
+                  <label for="example-description">Example Description</label>
+                  <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+                </div> -->
+            <button type="submit" id="submit" class="btn btn-primary btn-submit float-right">Submit</button>
+          </form>
+          <!-- <h3>Examples:</h3>
+              <ul id="example-list" class="list-group">
+                {{#each examples}}
+                <li data-id="{{this.id}}" class="list-group-item">
+                  <a href="example/{{this.id}}">{{this.text}}</a>
+                  <button class="btn btn-danger float-right delete">ｘ</button>
+                </li>
+                {{/each}}
+              </ul> -->
+
+              <!-- results after function calculations are run -->
+              <div class="card">
+                <div class="card-header">
+                  Your Resulting Budget is:
+                </div>
+                <div class="budget-result text-center">
+                  {result}
+                </div>
+              </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="../public/js/index.js"></script>
+
+
+</body>
+
+</html>
