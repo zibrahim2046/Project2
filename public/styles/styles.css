@@ -98,6 +98,7 @@ footer {
   background-color: #243E36;
   color: white;
   text-align: center;
+  margin-top: 20px;
 }
 
 .btn-primary {
@@ -210,6 +211,20 @@ h5 {
   font-weight: 900;
   color: #243E36;
 }
+
+.currency-converter {
+  margin-top: 30px;
+  color: #243E36;
+}
+
+.panel-title {
+  color: #243E36;
+}
+
+.currency-converter {
+  background-color: #E0EEC6
+}
+
 /* ==================== */
 /* MEDIA QUERIES */
 /* ==================== */

@@ -83,7 +83,7 @@
             </div>
 
             <div class="col-md-6 col-xs-12">
-              <h4>Salary</h4>
+              <h4>Salary (after taxes)</h4>
               <!-- <label for="budget"></label> -->
               <input required type="number" step=".01" pattern="\d+" min="0" id="salary" class="form-control"
                 aria-describedby="salary" placeholder="Enter Yearly Salary Here">
@@ -202,6 +202,19 @@
                 </li>
                 {{/each}}
               </ul> -->
+
+              <!-- results after function calculations are run -->
+              <div class="card">
+                <div class="card-header">
+                  Your Resulting Budget is:
+                </div>
+                <div class="budget-result text-center">
+                  {result}
+                </div>
+              </div>
+
+
+
         </div>
       </div>
     </div>
