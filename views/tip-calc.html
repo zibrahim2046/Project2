@@ -34,10 +34,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link active" href="#">Budget<span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="budget.html">Budget<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Stocks</a>
+          <a class="nav-link" href="stocks.html">Stocks</a>
         </li>
         <!-- <li class="nav-item">
               <a class="nav-link" href="#">Calculator</a>
@@ -48,10 +48,15 @@
             Calculators
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
             <a class="dropdown-item" href="#">Tax Calculator</a>
             <a class="dropdown-item" href="#">Tip Calculator</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Currency Converter</a>
+=======
+            <a class="dropdown-item" href="tax-calc.html">Tax Calculator</a>
+            <a class="dropdown-item" href="tip-calc.html">Tip Calculator</a>
+>>>>>>> master
 
         </li>
         <!-- <li class="nav-item">
@@ -82,14 +87,9 @@
               <div class="col-md-6 col-xs-12">
                 <h4>Bill Amount</h4>
                 <!-- <label for="salary"></label> -->
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text dollar-sign">$</span>
-                  </div>
                 <input type="number" step=".01" pattern="\d+" min="0" id="bill" class="form-control"
-                  aria-describedby="bill" placeholder="">
+                  aria-describedby="bill" placeholder="$">
               </div>
-            </div>
 
               <div class="col-md-6 col-xs-12">
                 <h4>Tip Percentage</h4>
@@ -119,12 +119,8 @@
                 <h4>Bill Amount</h4>
                 <!-- <label for="salary"></label> -->
                 <fieldset disabled>
-                   <div class="form-group">
-                    <div class="input-group mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text dollar-sign">$</span>
-                      </div>
-                    <input type="text" id="bill" class="form-control" placeholder="{user's bill amount}"></div>
+                  <div class="form-group">
+                    <input type="text" id="bill" class="form-control" placeholder="$">
                   </div></fieldset>
               </div>
 
@@ -134,7 +130,7 @@
 
                 <fieldset disabled>
                   <div class="form-group">
-                    <input type="text" id="tip-percentage" class="form-control" placeholder="{what the user chose}">
+                    <input type="text" id="tip-percentage" class="form-control" placeholder="20%">
                   </div></fieldset>
               </div>
 
@@ -142,7 +138,7 @@
                 <h4>Total Bill Amount</h4>
                 <!-- <label for="salary"></label> -->
                 <div class="alert alert-primary total-bill" role="alert">
-                  {result}
+                  $##.##
                 </div>
               </div>
 
