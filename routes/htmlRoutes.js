@@ -8,6 +8,9 @@ module.exports = function(app) {
   app.get("/tipcalc", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "sandbox-tip-calc.html"));
   });
+  app.get("/currency", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views", "currency-converter.html"));
+  });
 
   app.get("/stocks", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "sandbox-stocks.html"));
