@@ -14,7 +14,7 @@
     <link rel="icon" type="image" href="public/assets/images/logo_FACIA.ico">
 
     <!-- {{!-- CSS --}} -->
-    <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
     <!-- {{!-- page title --}} -->
     <title>Currency Converter</title>
@@ -27,43 +27,45 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link active" href="#">Budget<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Stocks</a>
-                </li>
-                <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Calculator</a>
-            </li> -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Calculators
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Tip Calculator</a>
-                        <a class="dropdown-item" href="#">Tax Calculator</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Currency Converter</a>
-
-                </li>
-                <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li> -->
-            </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
+          <nav>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link " href="views/budget.html">Budget<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="views/stocks.html">Stocks</a>
+            </li>
+            <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Calculator</a>
+                </li> -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Calculators
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="views/tax-calc.html">Tax Calculator</a>
+                <a class="dropdown-item" href="views/tip-calc.html">Tip Calculator</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="views/currency-converter.html">Currency Converter</a>
+                
+              </div>
+            </li>
+            <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
         </div>
-    </nav>
+      </nav>
 
     <div class="container">
         <div class="text-center jumbotron>

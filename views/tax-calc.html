@@ -14,7 +14,7 @@
   <link rel="icon" type="image" href="public/assets/images/logo_FACIA.ico">
 
   <!-- {{!-- CSS --}} -->
-  <link rel="stylesheet" href="public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
   <!-- {{!-- page title --}} -->
   <title>Tip Calculator</title>
@@ -32,25 +32,29 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <nav>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link active" href="sandbox.html">Budget<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="budget.html">Budget<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sandbox-stocks.html">Stocks</a>
+          <a class="nav-link" href="stocks.html">Stocks</a>
         </li>
         <!-- <li class="nav-item">
               <a class="nav-link" href="#">Calculator</a>
             </li> -->
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown active">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Calculators
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="sandbox-tax-calc.html">Tax Calculator</a>
-            <a class="dropdown-item" href="sandbox-tip-calc.html">Tip Calculator</a>
-
+            <a class="dropdown-item" href="tax-calc.html">Tax Calculator</a>
+            <a class="dropdown-item" href="tip-calc.html">Tip Calculator</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="currency-converter.html">Currency Converter</a>
+            
+          </div>
         </li>
         <!-- <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
