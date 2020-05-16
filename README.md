@@ -15,51 +15,26 @@
 
 </div>
 
-# Budgeting
+# Main Budgeting Function
+Budgeting page takes in expenses, saves them to the database, and calculates remaining budget.
 ![main-budget-page](public/assets/images/MainBudget-page.png)
-
-</br></br>
-
-
-## Instructions
-
-* Only one member of each group should complete this activity while the others watch.
-
-* Copy the entire [Unsolved](Unsolved) folder to another location on your computers &mdash; wherever you would like your local copy of the group project to be.
-
-* Rename the copied "Unsolved" folder to the name of your project.
-
-* Open the copied project folder's `package.json` file and change its `name` property to the name of your project.
-
-* CD to the root of the copied project folder with your terminal and run the following commands:
-
-  ```
-  git init
-  git add .
-  git commit -m "Initial commit"
-  ```
-
-* Then copy the GitHub repo's remote SSH URL (the same URL you'd use to clone the repo).
-
-* Run the following commands in your terminal, replacing <remote-url> with your GitHub repo's remote SSH URL.
-
-  ```
-  git remote add origin <remote-url>
-  git push origin master
-  ```
-
-* If completed successfully you should see all of the files uploaded to GitHub.
-
-* All other group members should now clone the repo.
-
-* Discuss as a group:
-
-  * How would you now add changes to this project?
-
 </br></br>
 
 # Tip Calculator
-![main-budget-page](public/assets/images/TipCalculator-page.png)
+Tip Calculator calculates total bill amount from bill amount and desired tip percentage.
+![tip-calc-page](public/assets/images/TipCalculator-page.png)
+</br></br>
+
+# Tax Calculator
+Tax Calculator calculates total price from item price and tax rate by state.
+![tax-calc-page](public/assets/images/TaxCalculator-page.png)
+</br></br>
+
+# Currency Converter
+Currency Converter uses a widget from https://currencyrate.today/ to convert entered amounts.
+![currency-converter-page](public/assets/images/CurrencyConverter-page.png)
+Resource:
+![widget-window](public/assets/images/widget-window.png)
 </br></br>
 
 # Error: 404 Page Not Found
@@ -72,7 +47,7 @@ When the user tries to access an invalid URL, we display a 404 page.
 * Is backed by a MySQL Database with a Sequelize ORM
 * Uses both GET and POST routes for retrieving and adding new data
 * Is deployed using Heroku (with Data)
-* Incorporates **at least one new library, package, or technology that we haven’t discussed**
+* Incorporates widget
 * Has a polished frontend/UI
 * Is organized by a folder structure that meets MVC Paradigm
 * Meets good quality coding standards (indentation, scoping, naming)
