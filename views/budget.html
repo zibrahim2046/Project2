@@ -25,45 +25,33 @@
 
   <!-- {{{body}}} -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+    <img src="../public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <nav>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link active" href="budget.html">Budget<span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="/">Budget<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="stocks.html">Stocks</a>
+          <a class="nav-link" href="/stocks">Stocks</a>
         </li>
-        <!-- <li class="nav-item">
-              <a class="nav-link" href="#">Calculator</a>
-            </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/currency">Currency</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Calculators
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="tax-calc.html">Tax Calculator</a>
-            <a class="dropdown-item" href="tip-calc.html">Tip Calculator</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="currency-converter.html">Currency Converter</a>
-            
+            <a class="dropdown-item" href="/taxcalc">Tax Calculator</a>
+            <a class="dropdown-item" href="/tipcalc">Tip Calculator</a>
           </div>
         </li>
-        <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li> -->
-      </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form> -->
     </div>
   </nav>
 
@@ -88,7 +76,7 @@
             <div class="col-md-6 col-xs-12">
               <h4>Salary (after taxes)</h4>
               <!-- <label for="budget"></label> -->
-              <input type="number" step=".01" pattern="\d+" min="0" id="salary" class="form-control"
+              <input required type="number" step=".01" pattern="\d+" min="0" id="salary" class="form-control"
                 aria-describedby="salary" placeholder="Enter Yearly Salary Here">
             </div>
           </div>
@@ -105,7 +93,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="rent" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="rent" class="form-control"
                     aria-describedby="rent" placeholder="Monthly Rent Expense">
                 </div>
 
@@ -117,7 +105,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="gas" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="gas" class="form-control"
                     aria-describedby="gas" placeholder="Monthly Gas Allowance">
                 </div>
               </div>
@@ -128,7 +116,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="groceries" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="groceries" class="form-control"
                     aria-describedby="groceries" placeholder="Monthly Groceries Expense">
                 </div>
               </div>
@@ -139,7 +127,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="utilities" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="utilities" class="form-control"
                     aria-describedby="gas" placeholder="Monthly Utilities Expense">
                 </div>
               </div>
@@ -150,7 +138,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="phone" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="phone" class="form-control"
                     aria-describedby="phone" placeholder="Monthly Phone Expense">
                 </div>
               </div>
@@ -161,7 +149,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="car" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="car" class="form-control"
                     aria-describedby="gas" placeholder="Monthly Car Expense">
                 </div>
               </div>
@@ -172,7 +160,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="misc" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="misc" class="form-control"
                     aria-describedby="misc" placeholder="Misc. Monthly Expenses">
                 </div>
               </div>
@@ -183,7 +171,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text dollar-sign">$</span>
                   </div>
-                  <input type="number" step=".01" pattern="\d+" min="0" id="entertainment" class="form-control"
+                  <input required type="number" step=".01" pattern="\d+" min="0" id="entertainment" class="form-control"
                     aria-describedby="entertainment" placeholder="Monthly Entertainment Allowance">
                 </div>
               </div>
