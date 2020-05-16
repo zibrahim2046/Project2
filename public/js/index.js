@@ -1,7 +1,7 @@
 var user = {};
 
 var API = {
-  saveUser: function(user) {
+  saveUser: function(userInfo) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json",
