@@ -34,7 +34,7 @@ Tax Calculator calculates total price from item price and tax rate by state.
 </br></br>
 
 # Stocks
-Stocks page returns current financial news from https://polygon.io/ API.
+Stocks page returns current financial news from https://finnhub.io/docs/api API.
 ![stocks-page](public/assets/images/Stocks-page.png)
 </br></br>
 
