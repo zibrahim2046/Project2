@@ -22,8 +22,6 @@ function theNews() {
           .addClass("btn-primary btn-stocks-link")
           .attr("href", results[i].url)
 
-          var rule = '<hr />'
-
 
           var newsImage = $("<img>");
 
@@ -34,13 +32,12 @@ function theNews() {
           newsDiv.append(h4);
           newsDiv.append(links);
           newsDiv.append(newsImage);
-          newsDiv.append("<hr>");
 
           newsDiv.append(links);
+          newsDiv.append("<hr>");
 
 
           $("#allNews").append(newsDiv);
-          $("#allNews").append(rule);
 
 
         }

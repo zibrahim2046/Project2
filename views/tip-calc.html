@@ -4,26 +4,25 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- {{!-- Bootstrap --}} -->
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
 
-  <!-- {{!-- Google font --}} -->
+  <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 
-  <!-- {{!-- favicon --}} -->
+  <!-- favicon -->
   <link rel="icon" type="image" href="../public/assets/images/logo_FACIA.ico">
 
-  <!-- {{!-- CSS --}} -->
+  <!-- CSS -->
   <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
-  <!-- {{!-- page title --}} -->
+  <!-- page title -->
   <title>Tip Calculator</title>
 
 </head>
 
 <body>
 
-  <!-- {{{body}}} -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <img src="../public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -61,24 +60,17 @@
     <div class="container tip">
       <div class="col-12">
 
-        <!-- <h1>{{msg}}</h1> -->
-        <!-- <div class="alert text-center" role="alert">
-            <h1>Enter Financial Information to Calculate Your Budget</h1>
-          </div> -->
-
-        <!-- tip information -->
+        <!-- tip information for before function is run -->
         <div class="container tip-input-info">
           <div class="row">
             <div class="col-md-6 col-xs-12">
               <h4>Bill Amount</h4>
-              <!-- <label for="salary"></label> -->
               <input type="number" step=".01" pattern="\d+" min="0" id="bill" class="form-control"
                 aria-describedby="bill" placeholder="$">
             </div>
 
             <div class="col-md-6 col-xs-12">
               <h4>Tip Percentage</h4>
-              <!-- <label for="budget"></label> -->
               <button class="btn btn-secondary dropdown-toggle text-left" type="button" id="dropdownMenu2"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:100%;">
                 Select a Tip
@@ -97,12 +89,11 @@
         </div>
 
 
-        <!-- tip results -->
+        <!-- tip results to display after function is run -->
         <div class="container tip-results">
           <div class="row">
             <div class="col-md-4 col-xs-12">
               <h4>Bill Amount</h4>
-              <!-- <label for="salary"></label> -->
               <fieldset disabled>
                 <div class="form-group">
                   <input type="text" id="bill" class="form-control" placeholder="$">
@@ -112,7 +103,6 @@
 
             <div class="col-md-4 col-xs-12">
               <h4>Tip Percentage</h4>
-              <!-- <label for="budget"></label> -->
 
               <fieldset disabled>
                 <div class="form-group">
@@ -123,29 +113,23 @@
 
             <div class="col-md-4 col-xs-12">
               <h4>Total Bill Amount</h4>
-              <!-- <label for="salary"></label> -->
               <div class="alert alert-primary total-bill" role="alert">
                 $##.##
               </div>
             </div>
-
           </div>
           <form class="clearfix mb-4" action="POST">
             <button id="button-another-tip" class="btn btn-primary btn-submit btn-calculate float-right">Calculate
               Another Tip</button>
           </form>
         </div>
-
       </div>
     </div>
 
     <footer>
       <div class="footer">
-
-
       </div>
     </footer>
-
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -158,7 +142,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
 
-    <!-- Our CSS -->
+    <!-- Our JS -->
     <script src="../public/js/index.js"></script>
 
 </body>

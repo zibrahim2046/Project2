@@ -4,90 +4,86 @@
 <head>
     <meta charset="utf-8">
 
-    <!-- {{!-- Bootstrap --}} -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
 
-    <!-- {{!-- Google font --}} -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 
-    <!-- {{!-- favicon --}} -->
+    <!-- favicon -->
     <link rel="icon" type="image" href="../public/assets/images/logo_FACIA.ico">
 
-    <!-- {{!-- CSS --}} -->
+    <!-- CSS -->
     <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
 
-    <!-- {{!-- page title --}} -->
+    <!-- Page Title -->
     <title>Currency Converter</title>
 
 </head>
 
+<body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-                <a class="nav-link " href="/">Budget<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/stocks">Stocks</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/currency">Currency</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Calculators
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/taxcalc">Tax Calculator</a>
-                    <a class="dropdown-item" href="/tipcalc">Tip Calculator</a>
-                </div>
-            </li>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <img src="/public/assets/images/logo_FACIA-gold.svg" style="width: 120px; margin-right: 20px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link " href="/">Budget<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/stocks">Stocks</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/currency">Currency</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Calculators
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/taxcalc">Tax Calculator</a>
+                        <a class="dropdown-item" href="/tipcalc">Tip Calculator</a>
+                    </div>
+                </li>
+        </div>
+    </nav>
 
-<div class="container">
-
-    <div class="text-center jumbotron>
-
+    <div class="container">
+        <!-- THIS IS THE CURRENCY CONVERTER WIDGET -->
+        <div class="text-center jumbotron>
             <!-- START CODE Attention! Do not modify this code; --><script>var fm = " USD";var to="USD" ;var
-        tz="timezone" ;var sz="1x1" ;var lg="en" ;var st="success" ;var lr="0" ;var rd="0" ;</script><a
-            href="https://currencyrate.today/converter-widget" title="Currency Converter">
-            <script src="//currencyrate.today/converter"></script></a>
-        <div style="font-size:.8em;"><a href="https://currencyrate.today">Currency Converter</a></div>
-        <!-- Attention! Do not modify this code; END CODE -->
-
+            tz="timezone" ;var sz="1x1" ;var lg="en" ;var st="success" ;var lr="0" ;var rd="0" ;</script><a
+                href="https://currencyrate.today/converter-widget" title="Currency Converter">
+                <script src="//currencyrate.today/converter"></script></a>
+            <div style="font-size:.8em;"><a href="https://currencyrate.today">Currency Converter</a></div>
+            <!-- Attention! Do not modify this code; END CODE -->
+        </div>
     </div>
 
-</html>
-
-</div>
-
-<footer>
-    <div class="footer">
-    </div>
-</footer>
+    <footer>
+        <div class="footer">
+        </div>
+    </footer>
 
 
-<!-- Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
-<!-- Our CSS -->
-<script src="../public/js/index.js"></script>
+    <!-- Our JS -->
+    <script src="../public/js/index.js"></script>
 
 </body>
 

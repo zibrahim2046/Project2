@@ -5,12 +5,14 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "budget.html"));
   });
+
   app.get("/tipcalc", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "tip-calc.html"));
   });
   app.get("/taxcalc", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "tax-calc.html"));
   });
+
   app.get("/currency", function(req, res) {
     res.sendFile(path.join(__dirname, "../views", "currency-converter.html"));
   });
